@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(content: params[:content])
-    redirect_to root_path
+    post = Post.create(content: params[:content])
+    render json:{ post: post }
   end
 
   def checked
@@ -17,6 +17,6 @@ class PostsController < ApplicationController
     end
 
     item = Post.find(params[:id])
-    render json: { post: item }
+    render json:{ post: item }
   end
 end

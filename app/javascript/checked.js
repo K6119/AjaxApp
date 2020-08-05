@@ -38,4 +38,3 @@ function check() {
 
 setInterval(check, 1000);
 
-window.addEventListener("load", check);
