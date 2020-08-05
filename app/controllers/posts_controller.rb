@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(memo: params[:memo])
-    redirect_to action: :index
+    Post.create(content: params[:content])
+    redirect_to root_path
   end
 
   def checked
